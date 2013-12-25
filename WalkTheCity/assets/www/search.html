@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Walk the city</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script>
+  $(function() {
+    var availableTags = [
+      "Bangalore",
+      "Mysore",
+      "Mangalore",
+      "Delhi",
+      "Trivandram",
+      "Cochi",
+      "Kollam",
+      "Hubli",
+      "Chitradurga",
+      "Palakkad",
+      "Mumbai",
+      "Agra",
+      "Hampi",
+      "Kolkatta",
+      "Fatehpur Sikri",
+      "Ajmir",
+      "Tirupathi",
+      "Vellakanni",
+      "Kannyakumari",
+      "Mandya",
+      "Chennai",
+      "Surat",
+      "Goa",
+      "Pondichery"
+    ];
+    $( "#city" ).autocomplete({
+      source: availableTags,
+      messages: {
+        noResults: '',
+        results: function() {}
+    }
+    });
+  });
+
+ $(function() { $("#btnsearch").click( function()
+           {
+            $("#results").show();
+           }
+           );
+});
+
+ $(function() { $("#btncancel").click( function()
+           {
+            $("#results").hide();
+           }
+           );
+});
+
+  </script>
+</head> 
+	<body > 
+		
+	 <div data-role="page" data-theme="d">
+	 	<div data-role="header" align="center" data-theme="d">
+		
+			Walk the City
+		
+		</div>
+	 	<div id="details" align="center" data-role="content" >
+			
+    		 <div class="">
+				  <label for="city">City</label>
+				  <input type="search"  id="city"   />
+
+				 
+				<fieldset class="ui-grid-a">
+					<div class="ui-block-a"><button type="submit" data-theme="a" id="btncancel">Cancel</button></div>
+					<div class="ui-block-b"><button type="submit" data-theme="a" id="btnsearch">Search</button>
+					</div>	   
+				</fieldset>
+				
+		</div>
+    		
+ 	<div id="results" style = "display:none">
+    	<table data-role="table" id="movie-table-custom" data-mode="reflow" class="movie-list">
+		  <thead>
+		    <tr>
+		      <th data-priority="1">Rank</th>
+		      <th style="width:40%">Route Name</th>
+		      <th data-priority="2">Type</th>
+		      <th data-priority="3">Total Distance(km)</th>
+		      <th data-priority="4">Time Required(hr)</th>
+		      <th data-priority="4">Best time to Visit</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th>1</th>
+		      <td class="title"><a href="locate3.html" rel="external">Bannerghatta National Park</a></td>
+		      <td>Forest Walk</td>
+		      <td>10</td>
+		      <td>5</td>
+		      <td>Oct to Feb</td>
+		    </tr>
+		    <tr>
+		      <th>2</th>
+		      <td class="title"><a href="locate3.html" rel="external">MG Road and commercial street</a></td>
+		      <td>Shopping Walk</td>
+		      <td>4</td>
+		      <td>2</td>
+		      <td>Any time of the year</td>
+		    </tr>
+		    <tr>
+		      <th>3</th>
+		      <td class="title"><a href="locate3.html" rel="external">Cubbon Park</a></td>
+		      <td>Nature Walk</td>
+		      <td>6</td>
+		      <td>3</td>
+		      <td>Any</td>
+		    </tr>
+		    <tr>
+		      <th>4</th>
+		      <td class="title"><a href="locate3.html" rel="external">Lalbagh</a></td>
+		      <td>Nature Walk</td>
+		      <td>10</td>
+		      <td>5</td>
+		      <td>Oct to Feb</td>
+		    </tr>
+		    <tr>
+		      <th>5</th>
+		      <td class="title"><a href="locate3.html" rel="external">Basavanagudi</a></td>
+		      <td>Historic Walk</td>
+		      <td>10</td>
+		      <td>5</td>
+		      <td>Oct to Feb</td>
+		    </tr>
+		    <tr>
+		      <th>6</th>
+		      <td class="title"><a href="locate3.html" rel="external">Bangalore Palace</a></td>
+		      <td>Historic Walk</td>
+		      <td>1</td>
+		      <td>0.5</td>
+		      <td>Oct to Feb</td>
+		    </tr>
+		    <tr>
+		      <th>7</th>
+		      <td class="title"><a href="locate3.html" rel="external">ISKCON Temple</a></td>
+		      <td>Relegious Walk</td>
+		      <td>10</td>
+		      <td>5</td>
+		      <td>Oct to Feb</td>
+		    </tr>
+		    <tr>
+		      <th>8</th>
+		      <td class="title"><a href="locate3.html" rel="external">Vidhana Soudha</a></td>
+		      <td>Historic Walk</td>
+		      <td>10</td>
+		      <td>5</td>
+		      <td>Oct to Feb</td>
+		    </tr>
+		    <tr>
+		      <th>9</th>
+		      <td class="title"><a href="locate3.html" rel="external">Bangalore Fort</a></td>
+		      <td>Historic Walk</td>
+		      <td>10</td>
+		      <td>5</td>
+		      <td>Oct to Feb</td>
+		    </tr>
+		    <tr>
+		      <th>10</th>
+		     <td class="title"><a href="locate3.html" rel="external">Hesaraghatta Lake</a></td>
+		      <td>Nature Walk</td>
+		      <td>10</td>
+		      <td>5</td>
+		      <td>Oct to Feb</td>
+		    </tr>
+		  </tbody>
+		</table>
+    </div>
+    		
+	</div>
+	 <div data-role="footer" data-theme="d">
+		 	
+	 </div>
+		 (c) Copyright 2013 EnCO2S. All Rights Reserved.
+		
+	</body> 
+	
+</html>

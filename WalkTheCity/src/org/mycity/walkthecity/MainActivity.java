@@ -1,7 +1,10 @@
-package com.simplegame;
+package org.mycity.walkthecity;
 
 import android.os.Bundle;
 import org.apache.cordova.DroidGap;
+
+import com.simplegame.R;
+
 import android.app.Activity;
 import android.view.Menu;
 
@@ -11,7 +14,7 @@ public class MainActivity extends DroidGap {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
-        super.loadUrl("file:///android_asset/www/index.html");
+        super.loadUrl("file:///android_asset/www/search.html");
     }
 
 

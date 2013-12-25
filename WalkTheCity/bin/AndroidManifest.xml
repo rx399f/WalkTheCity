@@ -38,7 +38,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.simplegame.MainActivity"
+            android:name="org.mycity.walkthecity.MainActivity"
             android:label="@string/app_name" 
             android:configChanges="orientation|keyboardHidden">
             <intent-filter>
